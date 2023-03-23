@@ -1,4 +1,25 @@
 Windows Registry Editor Version 5.00
 
+; fixing taskbar size
 [HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
 "MinWidth"="38"
+
+; disabling edge bullshit
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"DefaultBrowserSettingEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate]
+"CreateDesktopShortcutDefault"=dword:00000000
+"RemoveDesktopShortcutDefault"=dword:00000002
+
+; disabling cast to device
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}"=""
+
+; remove web search results from start menu
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer]
+"DisableSearchBoxSuggestions"=dword:00000001
+
+; disable win11 upgrade prompt, value should be a timestamp in the future
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
+"SvOfferDeclined"=hex(b):ac,60,54,1e,9d,01,00,00
