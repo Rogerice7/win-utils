@@ -3,6 +3,6 @@
     "DisableAppUpdate": true,
     "DisableFirefoxAccounts": true,
     "DisablePocket": true,
-		"DisableFirefoxScreenshots": true
+    "DisableFirefoxScreenshots": true
   }
 }
