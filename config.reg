@@ -20,6 +20,10 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer]
 "DisableSearchBoxSuggestions"=dword:00000001
 
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"CortanaConsent"=dword:00000000
+"BingSearchEnabled"=dword:00000000
+
 ; disable win11 upgrade prompt, value should be a timestamp in the future
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
 "SvOfferDeclined"=hex(b):ac,60,54,1e,9d,01,00,00
