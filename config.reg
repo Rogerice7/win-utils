@@ -7,6 +7,7 @@ Windows Registry Editor Version 5.00
 ; disabling edge bullshit
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
 "DefaultBrowserSettingEnabled"=dword:00000000
+"WebWidgetAllowed"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate]
 "CreateDesktopShortcutDefault"=dword:00000000
