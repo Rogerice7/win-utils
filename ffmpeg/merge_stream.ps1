@@ -1,0 +1,1 @@
+foreach ($f in Get-ChildItem -Filter *.mkv) {$stream = $f.BaseName + ".flac"; $out = $f.BaseName + "_new.mkv"; ffmpeg.exe -i $f.Name -i $stream -map 0 -map 1 -c copy -metadata:s:a:1 language=eng -metadata:s:a:1 title="English" $out}
