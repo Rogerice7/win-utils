@@ -28,3 +28,16 @@ Windows Registry Editor Version 5.00
 ; disable win11 upgrade prompt, value should be a timestamp in the future
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
 "SvOfferDeclined"=hex(b):ac,60,54,1e,9d,01,00,00
+
+; disable win11 upgrade
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"ProductVersion"="10"
+"TargetReleaseVersionInfo"="22H2"
+"TargetReleaseVersion"=dword:00000001
+"DisableOSUpgrade"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore]
+"DisableOSUpgrade"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\Setup\UpgradeNotification]
+"UpgradeAvailable"=dword:00000000
